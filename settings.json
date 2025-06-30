@@ -1,0 +1,118 @@
+// https://zed.dev/docs/configuring-zed
+{
+  "vim_mode": false,
+  "icon_theme": "Catppuccin Frappé",
+  "show_edit_predictions": false,
+  "agent": {
+    "model_parameters": [],
+    "default_profile": "ask",
+    "dock": "left",
+    "version": "2"
+  },
+  "format_on_save": "on",
+  "wrap_guides": [80, 120],
+  "hour_format": "hour24",
+  "theme": {
+    "mode": "dark",
+    "light": "Zedokai Light",
+    "dark": "Kanagawa"
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "toolbar": {
+      "breadcrumbs": false
+    }
+  },
+  "ui_font_family": "SF Pro Text",
+  "ui_font_size": 15.5,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 14,
+  "unstable.ui_density": "compact",
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": true
+  },
+  "tabs": {
+    "close_position": "left",
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "dock": "left",
+    "button": "never"
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_user_picture": false
+  },
+  "gutter": {
+    "min_line_number_digits": 0
+  },
+  "file_types": {
+    "C++": ["*.metal"]
+  },
+
+  "languages": {
+    "C++": {
+      "tab_size": 2
+    },
+    "LaTeX": {
+      "formatter": {
+        "external": {
+          "command": "tex-fmt",
+          "arguments": ["--tab", "4", "--stdin"]
+        }
+      }
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy"
+        }
+      }
+    },
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "latexindent": { "modifyLineBreaks": true },
+
+          "chktex": {
+            "onOpenAndSave": true,
+            "onEdit": true
+          },
+
+          "build": {
+            "args": ["-lualatex", "-interaction=batchmode"],
+            "onSave": true
+          },
+
+          "forwardSearch": {
+            "executable": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+            "args": ["-r", "%l", "%p", "%f"]
+          }
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  }
+}
