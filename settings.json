@@ -1,7 +1,8 @@
 // https://zed.dev/docs/configuring-zed
 {
+  "context_servers": {},
   "vim_mode": false,
-  "icon_theme": "Catppuccin Frappé",
+  "icon_theme": "Soft Charmed Icons",
   "show_edit_predictions": false,
   "agent": {
     "model_parameters": [],
@@ -9,13 +10,19 @@
     "dock": "left",
     "version": "2"
   },
+  "minimap": {
+    "thumb": "hover",
+    "max_width_columns": 40,
+    "display_in": "active_editor",
+    "show": "always"
+  },
   "format_on_save": "on",
   "wrap_guides": [80, 120],
   "hour_format": "hour24",
   "theme": {
     "mode": "dark",
     "light": "Zedokai Light",
-    "dark": "Kanagawa"
+    "dark": "Min Dark (Blurred)"
   },
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font Mono",
@@ -58,7 +65,9 @@
     "show_user_picture": false
   },
   "gutter": {
-    "min_line_number_digits": 0
+    "min_line_number_digits": 0,
+    "breakpoints": false,
+    "runnables": false
   },
   "file_types": {
     "C++": ["*.metal"]
