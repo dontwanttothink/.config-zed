@@ -1,14 +1,56 @@
 // https://zed.dev/docs/configuring-zed
 {
-  "context_servers": {},
-  "vim_mode": false,
-  "icon_theme": "Soft Charmed Icons",
+  // "auto_signature_help": true,
+  "ui_font_features": {
+    "calt": 0
+  },
+  "context_servers": {
+    "mcp-server-brave-search": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "brave_api_key": "BSALhTS95mutgKUCbd_BJJtxIwgraG4"
+      }
+    },
+    "mcp-server-github": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        // "github_personal_access_token": ""
+      }
+    }
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Soft Charmed Icons",
+    "dark": "Soft Charmed Icons"
+  },
   "show_edit_predictions": false,
   "agent": {
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "enable_all_context_servers": true
+      }
+    },
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    },
+    "inline_assistant_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
+    },
+    "play_sound_when_agent_done": true,
     "model_parameters": [],
-    "default_profile": "ask",
-    "dock": "left",
-    "version": "2"
+    "default_profile": "write",
+    "dock": "left"
   },
   "minimap": {
     "thumb": "hover",
@@ -17,12 +59,11 @@
     "show": "always"
   },
   "format_on_save": "on",
-  "wrap_guides": [80, 120],
-  "hour_format": "hour24",
+  // "wrap_guides": [80, 120],
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Zedokai Light",
-    "dark": "Min Dark (Blurred)"
+    "dark": "Rosé Pine"
   },
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font Mono",
@@ -62,18 +103,27 @@
   },
   "title_bar": {
     "show_branch_icon": true,
-    "show_user_picture": false
+    "show_user_picture": false,
+    "show_sign_in": false
   },
   "gutter": {
     "min_line_number_digits": 0,
     "breakpoints": false,
-    "runnables": false
+    "runnables": false,
+    "folds": true,
+    "line_numbers": true
   },
   "file_types": {
     "C++": ["*.metal"]
   },
 
   "languages": {
+    "JSONC": {
+      "formatter": "prettier"
+    },
+    "Java": {
+      "show_edit_predictions": false
+    },
     "C++": {
       "tab_size": 2
     },
@@ -87,6 +137,12 @@
     }
   },
   "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
+      }
+    },
     "rust-analyzer": {
       "initialization_options": {
         "check": {

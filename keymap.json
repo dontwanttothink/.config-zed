@@ -20,8 +20,12 @@
       "cmd-9": ["pane::ActivateItem", 8],
       "cmd-0": "pane::ActivateLastItem",
       "cmd--": "pane::GoBack",
-      "cmd-_": "pane::GoForward",
-      "cmd-shift-f": "pane::DeploySearch"
+      "cmd-_": "pane::GoForward"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-.": "editor::ConfirmCodeAction"
     }
   }
 ]
