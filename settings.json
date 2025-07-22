@@ -9,7 +9,7 @@
       "source": "extension",
       "enabled": true,
       "settings": {
-        "brave_api_key": "BSALhTS95mutgKUCbd_BJJtxIwgraG4"
+        // "brave_api_key": "(revoked)"
       }
     },
     "mcp-server-github": {
