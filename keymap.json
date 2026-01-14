@@ -27,5 +27,17 @@
     "bindings": {
       "cmd-.": "editor::ConfirmCodeAction"
     }
-  }
+  },
+	{
+		"context": "Workspace",
+		"bindings": {
+			"cmd-b": "workspace::ToggleRightDock",
+		},
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"alt-cmd-b": "workspace::ToggleLeftDock",
+		},
+	},
 ]
